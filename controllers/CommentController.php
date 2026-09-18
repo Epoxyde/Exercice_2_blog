@@ -6,7 +6,7 @@ class CommentController
      * Ajoute un commentaire.
      * @return void
      */
-    public function addComment() : void
+    public function addComment(): void
     {
         // Récupération des données du formulaire.
         $pseudo = Utils::request("pseudo");
@@ -49,7 +49,7 @@ class CommentController
      * Supprime un commentaire.
      * @return void
      */
-    public function deleteComment() : void
+    public function deleteComment(): void
     {
         // On vérifie que l'utilisateur est connecté.
         if (!isset($_SESSION['user'])) {
