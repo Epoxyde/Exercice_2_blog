@@ -111,11 +111,12 @@
      * @param string $format : le format pour la convertion de la date si elle est une string.
      * Par défaut, c'est le format de date mysql qui est utilisé.
      */
-    public function setDateUpdate(string|DateTime $dateUpdate, string $format = 'Y-m-d H:i:s') : void 
+    public function setDateUpdate(string|DateTime|null $dateUpdate): void
     {
         if (is_string($dateUpdate)) {
-            $dateUpdate = DateTime::createFromFormat($format, $dateUpdate);
+            $dateUpdate = new DateTime($dateUpdate);
         }
+    
         $this->dateUpdate = $dateUpdate;
     }
 

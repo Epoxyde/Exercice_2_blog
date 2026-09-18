@@ -350,3 +350,65 @@ footer {
     color: white;
     background-color: var(--headerColor);
 }
+
+/* Tableau de monitoring de l'administration */
+
+.monitoringTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: var(--headerPaleColor);
+}
+
+.adminArticle {
+    background-color: var(--headerPaleColor);
+}
+
+.monitoringTable th,
+.monitoringTable td {
+    padding: 15px;
+    text-align: left;
+}
+
+/* En-tête du tableau */
+.monitoringTable thead {
+    color: var(--headerColor);
+    font-weight: bold;
+}
+
+.monitoringTable th a {
+    color: var(--headerColor);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.monitoringTable th a:hover {
+    text-decoration: underline;
+}
+
+/* Corps du tableau */
+.monitoringTable tbody {
+    color: white;
+}
+
+/* Alternance des lignes */
+.monitoringTable tbody tr:nth-child(odd) {
+    background-color: var(--headerColor);
+}
+
+.monitoringTable tbody tr:nth-child(even) {
+    background-color: var(--commentPaleColor);
+}
+
+/* Évite que les actions passent sur plusieurs lignes */
+.monitoringTable td:last-child {
+    white-space: nowrap;
+}
+
+
+/* Commentaires */
+
+.detailComment .submit {
+    display: inline-block;
+    margin-top: 10px;
+}

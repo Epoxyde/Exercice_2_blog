@@ -54,8 +54,13 @@ class ArticleManager extends AbstractEntityManager
                 ORDER BY $sortColumn $order";
 
         $result = $this->db->query($sql);
+        $articles = [];
 
-        return $result->fetchAll();
+        while ($article = $result->fetch()) {
+            $articles[] = new Article($article);
+        }
+
+        return $articles;
     }
     
     /**
